@@ -170,7 +170,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Portaltree - [GitHub Profile](https://github.com/asimo10) - ![email address image](images/text.gif)
+Portaltree - [GitHub Profile](https://github.com/asimo10) - <tahirmurata83@gmail.com>
 
 Project Link: [https://github.com/asimo10/pyforce](https://github.com/asimo10/pyforce)
 
