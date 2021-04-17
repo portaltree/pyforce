@@ -87,7 +87,7 @@ python -m pip install requests PySimpleGUI
 
 ### Installation
 
-1. Fork the repository
+1. Clone the repository
 
    ```sh
    git clone https://github.com/asimo10/pyforce.git
