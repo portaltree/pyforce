@@ -9,7 +9,7 @@
   </a>
 </p>
 
-  <h3 align="center">Best brute forcing tool in python</h3>
+  <h3 align="center">PyForce</h3>
 
   <p align="center">
     An awsome tool to brute force any website!
