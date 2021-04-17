@@ -69,7 +69,7 @@ For example, if you want lowercased letters and digits, enter `LD` or `DL`.
 
 To test PyForce, I recommend hosting your own server via [XAMPP](https://www.apachefriends.org/). After installing it, add this PHP code as `index.php`.
 
-```php+HTML
+```php
 <?php
 if ($_POST[usr] == "admin" and $_POST[pas] == "2"){
 	print "true";
