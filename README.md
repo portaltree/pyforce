@@ -55,8 +55,6 @@ If you have any issues, head to [issues](https://github.com/asimo10/pyforce/issu
 
 If you have a improvement, head to [Contributing](#Contributing)
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
 ### Features
 
 * Test if it can connect to the URL
