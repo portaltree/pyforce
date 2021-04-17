@@ -1,103 +1,132 @@
-# PyForce
 
-PyForce is a simple program that brute forces any website. It also supports many themes.
 
-![Display Image](image.png)
 
-## How to install
 
-```cmd
-$ python -m pip install requests PySimpleGUI random-password-generator
-```
 
-## Setting up
 
-When you first run the program, a window like this should pop up.
+Best brute forcing tool in python
+An awsome tool to brute force any website! 
 
-![GUI](gui.png)
+Report Bug · Request Feature
 
-**If you want to change the theme, go down to [how to customize](#How to customize).**
+Table of ContentsAbout The ProjectFeatures
+Built With
+Getting StartedDependencies
+Installation
+Usage
+Roadmap
+Contributing
+License
+Contact
+About The ProjectThis is one of my python projects which I've been working on. It is able to brute force any website and is fully customizable.
 
-The GUI consists of 6 input boxes:
+If you have any issues, head to issues.
 
-* URL
-* Username
-* Value for the username
-* Value for the password
-* The length of the password
-* Parameters
+If you have a improvement, head to Contributing
 
-### URL
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-Enter the URL of the website that you want to brute force.
+FeaturesTest if it can connect to the URL
 
-### Username
+Doesn't use the same generated password for faster results
 
-Enter the username of the victim.
+Fully customizable
 
-### Values
+Chose different kinds of generations
 
-Enter the values of each credentials.
+A simple GUI
 
-```html
-<form method="post">
-	<input name="usr" type="text">
-	<input name="pas" type="text">
-	<button type="submit">Submit</button>
-</form>
-```
+Counts how many times it tried
 
-In the above example the values would be `usr` for the username and `pas` for the password.
+Prints out every password that was used
 
-### Length
+Built WithThis project was built with the packages below.
 
-Enter the length of the password.
+PySimpleGUI
 
-### Parameter
+Requests
 
-For the parameter, you must enter the desired letters to add to the password generator. 
+Secrets
 
-| Parameter | Meaning           |
-| --------- | :---------------- |
-| U         | Uppercased Letter |
-| L         | Lowercased Letter |
-| D         | Digits            |
+Getting StartedTo start brute forcing, you must first install the dependencies.
 
-For example, if you want lowercased letters and digits, enter `LD` or `DL`.
+Dependenciespython -m pip install requests PySimpleGUI
 
-## How to use
+InstallationFork the repository
 
-To test PyForce, I recommend hosting your own server via [XAMPP](https://www.apachefriends.org/). After installing it, add this PHP code as `index.php`.
+git clone https://github.com/asimo10/pyforce.git
 
-```php
+Cd to the directory
+
+cd C://cd/to/the/clone
+
+Run pyforce.py in python
+
+python pyforce.py
+
+After that, a GUI like this should pop up
+
+UsageTo start using PyForce I recommend using XAMPP to test it. After setting up XAMPP, copy the PHP code below.
+
 <?php
-if ($_POST[usr] == "admin" and $_POST[pas] == "2"){
-	print "true";
+
+if ($_POST[usr] == "admin" and $_POST[psw] == "69"){
+  print "true";
 }
 else{
-	print "false";
+  print "false";
 }
+
 ?>
 <form method="post">
-	<input name="usr" type="text">
-	<input name="pas" type="text">
-	<button type="submit">Submit</button>
+  <input name="usr" type="text">
+  <input name="psw" type="text">
+  <button type="submit">Submit</button>
 </form>
-```
 
-All you have left to do is type in the info and you're good to go.
+Now, all you have to do is add each info into the input boxes.
 
-Once a match is found, the windows will close and a log will be left on the shell.
+Now, all you have to do is click on the Brute Force! button to start.
 
-![cmd](cmd.png)
+After you click it passwords will start printing on the console. Now all you have to do is sit back and wait while the program is guessing the password.
 
-## How to customize
+If a password match, a message like below should appear and the PyForce program should stop.
 
-To change the theme, change the `sg.theme()` to the theme that you want. For example:
+69
 
-```python
-sg.theme('DarkBlue7')
-```
+Success!
+Found password after 61 times
+Username: admin 
+Password: 69
 
-![Themes](themes.jpg)
+Process finished with exit code 0
 
+RoadmapSee the open issues for a list of proposed features (and known issues).
+
+ContributingContributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+Fork the Project
+
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+Push to the Branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+LicenseDistributed under the MIT License. See LICENSE for more information.
+
+ContactYour Name - portaltree - tahirmurata83@gmail.com
+
+Project Link: https://github.com/asimo10/pyforce
+
+[forks-shield]    https://img.shields.io/github/forks/asimo10/pyforce.svg?style=for-the-badge 
+[forks-url]    https://github.com/asimo10/pyforce/network/members 
+[stars-shield]    https://img.shields.io/github/stars/asimo10/pyforce.svg?style=for-the-badge 
+[stars-url]    https://github.com/asimo10/pyforce/stargazers 
+[issues-shield]    https://img.shields.io/github/issues/asimo10/pyforce.svg?style=for-the-badge 
+[issues-url]    https://github.com/asimo10/pyforce/issues 
+[license-shield]    https://img.shields.io/github/license/asimo10/pyforce.svg?style=for-the-badge 
+[license-url]    https://github.com/asimo10/pyforce/blob/master/LICENSE 
+[product-screenshot]    images/image.png 
