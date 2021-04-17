@@ -52,6 +52,7 @@ def bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars):
             print("Success!")
             print("Found password after " + str(count) + " times")
             print("Username:", usr, "Password:", pas)
+            input("Press Enter to exit ")
             exit()
 
 while True:
