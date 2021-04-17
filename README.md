@@ -79,31 +79,30 @@ To start brute forcing, you must first install the dependencies.
 
 ### Dependencies
 
+It is not needed to install the dependencies if you use the executable (`main.exe`).
+If you want to use the python file (`main.py`), it is needed.
 ```sh
 python -m pip install requests PySimpleGUI
 ```
 
 ### Installation
 
-1. Clone the repository
+#### For the executable file
+1. Go to [Releases](https://github.com/asimo10/pyforce/releases) and install `main.exe`.
+2. Just Double click on the executable
 
-   ```sh
-   git clone https://github.com/asimo10/pyforce.git
-   ```
+#### For the python file
+1. Go to [Releases](https://github.com/asimo10/pyforce/releases) and install `main.py`.
+2. Open your terminal and cd to the file.
+```sh
+cd CD/TO/THE/FILE
+```
+3. After that, run the file via python.
+```sh
+python main.py
+```
 
-2. Cd to the directory
-
-   ```sh
-   cd C://cd/to/the/clone
-   ```
-
-3. Run `pyforce.py` in python
-
-   ```sh
-   python pyforce.py
-   ```
-
-After that, a GUI like this should pop up
+A GUI like this should pop up
 
 ![GUI](images/gui.png)
 
