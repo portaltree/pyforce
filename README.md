@@ -105,7 +105,7 @@ python -m pip install requests PySimpleGUI
 
 After that, a GUI like this should pop up
 
-![GUI](images\gui.png)
+![GUI](images/gui.png)
 
 ## Usage
 
@@ -131,7 +131,7 @@ else{
 
 Now, all you have to do is add each info into the input boxes.
 
-![DemoGUI](images\demogui.png)
+![DemoGUI](images/demogui.png)
 
 Now, all you have to do is click on the Brute Force! button to start.
 
@@ -170,7 +170,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Portaltree - [GitHub Profile](https://github.com/asimo10) - <tahirmurata83@gmail.com>
+Portaltree - [GitHub Profile](https://github.com/asimo10) - ![email address image](images/text.gif)
 
 Project Link: [https://github.com/asimo10/pyforce](https://github.com/asimo10/pyforce)
 
