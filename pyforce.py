@@ -87,10 +87,10 @@ while True:
 
         test = [(usrnmvalue, usr), (pswrdvalue, " ")]
         get = requests.post(url, data=test)
-	text = get.text
-    	
-	status = requests.get(url)
-    	status.raise_for_status()
+        text = get.text
+
+        status = requests.get(url)
+        status.raise_for_status()
 
         bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars, text)
 
