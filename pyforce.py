@@ -9,10 +9,13 @@ sg.theme("DarkBlue7")
 
 # GUI
 layout = [
+    [sg.Text("", size=(10, 1)), sg.Text("Basic Configuration")],
     [sg.Text("URL", size=(11, 1)), sg.InputText("", size=(27, 1))],
     [sg.Text("Username", size=(11, 1)), sg.InputText("", size=(27, 1))],
     [sg.Text("Value (usrnm)", size=(11, 1)), sg.InputText("", size=(27, 1))],
     [sg.Text("Value (pswrd)", size=(11, 1)), sg.InputText("", size=(27, 1))],
+    [sg.Text()],
+    [sg.Text("", size=(8, 1)), sg.Text("Generation Parameters")],
     [sg.Text("Length", size=(11, 1)), sg.InputText("", size=(27, 1))],
     [sg.Text("", size=(11, 1)), sg.Checkbox("Uppercase Letters")],
     [sg.Text("Parameters", size=(11, 1)), sg.Checkbox("Lowercase Letters")],
