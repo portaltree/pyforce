@@ -2,6 +2,7 @@
 import requests
 import secrets
 import PySimpleGUI as sg
+import sys
 
 # Change the theme
 sg.theme("DarkBlue7")
@@ -48,7 +49,7 @@ def bruteforce(url, usr, usrnmvalue, pswrdvalue, length, chars, text):
             print("Found password after " + str(count) + " times")
             print("Username:", usr, "Password:", pas)
             input("Press Enter to exit ")
-            exit()
+            sys.exit()
 
 while True:
     event, values = window.read()
