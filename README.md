@@ -4,7 +4,7 @@
 [![MIT License][license-shield]][license-url]
 
 <p align="center">
-  <a href="https://github.com/asimo10/pyforce">
+  <a href="https://github.com/portaltree/pyforce">
     <img src="images/logo.png"/>
   </a>
 </p>
@@ -15,9 +15,9 @@
     An awsome tool to brute force any website!
     <br />
     <br />
-    <a href="https://github.com/asimo10/pyforce/issues">Report Bug</a>
+    <a href="https://github.com/portaltree/pyforce/issues">Report Bug</a>
     ·
-    <a href="https://github.com/asimo10/pyforce/issues">Request Feature</a>
+    <a href="https://github.com/portaltree/pyforce/issues">Request Feature</a>
   </p>
 
 <details open="open">
@@ -51,7 +51,7 @@
 
 This is one of my python projects which I've been working on. It is able to brute force any website and is fully customizable.
 
-If you have any issues, head to [issues](https://github.com/asimo10/pyforce/issues).
+If you have any issues, head to [issues](https://github.com/portaltree/pyforce/issues).
 
 If you have a improvement, head to [Contributing](#Contributing)
 
@@ -88,11 +88,11 @@ python -m pip install requests PySimpleGUI
 ### Installation
 
 #### For the executable file
-1. Go to [Releases](https://github.com/asimo10/pyforce/releases) and install `main.exe`.
+1. Go to [Releases](https://github.com/portaltree/pyforce/releases) and install `main.exe`.
 2. Just Double click on the executable
 
 #### For the python file
-1. Go to [Releases](https://github.com/asimo10/pyforce/releases) and install `main.py`.
+1. Go to [Releases](https://github.com/portaltree/pyforce/releases) and install `main.py`.
 2. Open your terminal and cd to the file.
 ```sh
 cd CD/TO/THE/FILE
@@ -151,7 +151,7 @@ Process finished with exit code 0
 
 ## Roadmap
 
-See the [open issues](https://github.com/asimo10/pyforce/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/portaltree/pyforce/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -169,18 +169,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Portaltree - [GitHub Profile](https://github.com/asimo10) - <tahirmurata83@gmail.com>
+Portaltree - [GitHub Profile](https://github.com/portaltree) - <tahirmurata83@gmail.com>
 
-Project Link: [https://github.com/asimo10/pyforce](https://github.com/asimo10/pyforce)
+Project Link: [https://github.com/portaltree/pyforce](https://github.com/portaltree/pyforce)
 
 
 
-[forks-shield]: https://img.shields.io/github/forks/asimo10/pyforce.svg?style=for-the-badge
-[forks-url]: https://github.com/asimo10/pyforce/network/members
-[stars-shield]: https://img.shields.io/github/stars/asimo10/pyforce.svg?style=for-the-badge
-[stars-url]: https://github.com/asimo10/pyforce/stargazers
-[issues-shield]: https://img.shields.io/github/issues/asimo10/pyforce.svg?style=for-the-badge
-[issues-url]: https://github.com/asimo10/pyforce/issues
-[license-shield]: https://img.shields.io/github/license/asimo10/pyforce.svg?style=for-the-badge
-[license-url]: https://github.com/asimo10/pyforce/blob/master/LICENSE
+[forks-shield]: https://img.shields.io/github/forks/portaltree/pyforce.svg?style=for-the-badge
+[forks-url]: https://github.com/portaltree/pyforce/network/members
+[stars-shield]: https://img.shields.io/github/stars/portaltree/pyforce.svg?style=for-the-badge
+[stars-url]: https://github.com/portaltree/pyforce/stargazers
+[issues-shield]: https://img.shields.io/github/issues/portaltree/pyforce.svg?style=for-the-badge
+[issues-url]: https://github.com/portaltree/pyforce/issues
+[license-shield]: https://img.shields.io/github/license/portaltree/pyforce.svg?style=for-the-badge
+[license-url]: https://github.com/portaltree/pyforce/blob/master/LICENSE
 [product-screenshot]: images/image.png
